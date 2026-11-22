@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Collection Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="dashboard-header">
+            <h1>Premium Collection System</h1>
+            <p>LIC Premium Payment Dashboard</p>
+        </header>
+
+        <!-- Dashboard Cards -->
+        <section class="dashboard-cards">
+
+            <div class="card">
+                <h3>Total Collection</h3>
+                <p id="totalAmount">Rs. 0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Payments</h3>
+                <p id="totalPayments">0</p>
+            </div>
+
+        </section>
+
+        <!-- Add Payment Form -->
+        <section class="section-box">
+
+            <h2>Add New Payment</h2>
+
+            <form id="paymentForm">
+
+                <label>Customer Name</label>
+                <input type="text" id="name" required>
+
+                <label>Policy Number</label>
+                <input type="text" id="policy" required>
+
+                <label>Premium Amount (Rs.)</label>
+                <input type="number" id="amount" min="0"
+                    placeholder="Enter Amount (Optional)">
+
+                <label>Payment Date</label>
+                <input type="date" id="date">
+
+                <button type="submit">Submit Payment</button>
+
+            </form>
+
+        </section>
+
+        <!-- Payment History -->
+        <section class="section-box">
+
+<!-- Payment Receipt -->
+<section class="section-box" id="receiptSection" style="display:none;">
+
+    <div id="receiptContent">
+
+        <h2>PAYMENT RECEIPT</h2>
+
+        <p><strong>Customer Name:</strong>
+            <span id="receiptName"></span>
+        </p>
+
+        <p><strong>Policy Number:</strong>
+            <span id="receiptPolicy"></span>
+        </p>
+
+        <p><strong>Premium Amount:</strong>
+            Rs. <span id="receiptAmount"></span>
+        </p>
+
+        <p><strong>Payment Date:</strong>
+            <span id="receiptDate"></span>
+        </p>
+
+        <h3>Payment Recorded Successfully!</h3>
+
+        <p>Thank you.</p>
+
+    </div>
+
+    <button type="button" id="printReceipt">
+        Print Receipt
+    </button>
+
+    <button type="button" id="closeReceipt">
+        Close Receipt
+    </button>
+
+</section>
+
+
+            <h2>Payment History</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Customer Name or Policy Number"
+            >
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Customer Name</th>
+                            <th>Policy Number</th>
+                            <th>Amount</th>
+                            <th>Payment Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="paymentHistory"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+<!-- Payment Receipt -->
+<section class="section-box" id="receiptSection" style="display:none;">
+
+    <div id="receiptContent">
+
+        <h2>PAYMENT RECEIPT</h2>
+
+        <p><strong>Customer Name:</strong>
+            <span id="receiptName"></span>
+        </p>
+
+        <p><strong>Policy Number:</strong>
+            <span id="receiptPolicy"></span>
+        </p>
+
+        <p><strong>Premium Amount:</strong>
+            Rs. <span id="receiptAmount"></span>
+        </p>
+
+        <p><strong>Payment Date:</strong>
+            <span id="receiptDate"></span>
+        </p>
+
+        <h3>Payment Recorded Successfully!</h3>
+        <p>Thank you.</p>
+
+    </div>
+
+    <button type="button" id="printReceipt">
+        Print Receipt
+    </button>
+
+    <button type="button" id="closeReceipt">
+        Close Receipt
+    </button>
+
+</section>
+
+
+        <footer>
+            <p>Premium Collection System | Demo Project</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
